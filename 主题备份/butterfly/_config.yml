@@ -1,0 +1,287 @@
+# --------------------------------------
+# Hexo Butterfly 主题配置文件
+# 官方文档：
+# 中文：https://butterfly.js.org/
+# 英文：https://butterfly.js.org/en/
+# --------------------------------------
+
+# --------------------------------------
+# 导航栏设置
+# --------------------------------------
+
+nav:
+  # 导航栏 Logo 图片
+  logo:
+  # 是否显示站点标题
+  display_title: true
+  # 是否固定导航栏
+  fixed: false
+
+menu:
+  # 这里可以自定义导航菜单，例如：
+  # 首页: / || fas fa-home
+  # 归档: /archives/ || fas fa-archive
+  # 分类: /categories/ || fas fa-folder-open
+  # 标签: /tags/ || fas fa-tags
+
+# --------------------------------------
+# 代码块设置
+# --------------------------------------
+
+code_blocks:
+  # 代码块主题：darker / pale night / light / ocean / false
+  theme: light
+  # 是否启用 Mac 风格
+  macStyle: true
+  # 代码块最大高度（单位：px）
+  height_limit: 400
+  # 是否自动换行
+  word_wrap: false
+
+  # 代码块工具栏
+  copy: true # 是否显示复制按钮
+  language: true # 是否显示语言标签
+  shrink: false # 是否折叠代码块（true=折叠，false=展开，none=隐藏按钮）
+  fullpage: false # 是否允许全屏查看代码
+
+# --------------------------------------
+# 社交媒体链接
+# --------------------------------------
+
+social:
+  # 格式：
+  #   图标: 链接 || 说明 || 颜色
+  # 示例：
+  #   fab fa-github: https://github.com/你的GitHub || GitHub || '#24292e'
+  #   fas fa-envelope: mailto:你的邮箱@example.com || Email || '#4a7dbe'
+
+# --------------------------------------
+# 图片相关设置
+# --------------------------------------
+
+# 网站 Favicon 图标
+favicon: /img/favicon.png
+
+# 头像设置
+avatar:
+  img: /img/Avatar.png
+  effect: false # 是否启用头像动画
+
+# 是否禁用所有页面顶部图片
+disable_top_img: false
+
+# 默认的顶部图片（适用于未设置 banner 的页面）
+default_top_img: /img/top-banner.png
+
+# 首页的 banner 图片
+index_img: /img/top-banner.png
+
+# 归档页的 banner 图片
+archive_img: /img/top-banner.png
+
+# 标签页的 banner 图片
+tag_img: /img/top-banner.png
+
+# 分类页的 banner 图片
+category_img: /img/top-banner.png
+
+# 页脚背景图片
+footer_img: /img/background.png
+
+# 网站背景（可以是颜色或图片 URL）
+background: /img/background.png
+
+# --------------------------------------
+# 文章相关设置
+# --------------------------------------
+
+# 是否显示目录（TOC）
+toc:
+  post: true # 在文章中显示
+  page: false # 在页面中显示
+  number: true # 显示目录编号
+  expand: false # 默认是否展开目录
+  style_simple: false # 使用简洁风格
+  scroll_percent: true # 显示滚动百分比
+
+# 文章版权信息
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# --------------------------------------
+# 首页文章列表布局
+# --------------------------------------
+
+# 文章在首页的显示布局：
+# 1: 左图右文
+# 2: 右图左文
+# 3: 左右交错
+# 4: 图片在上，信息在下
+# 5: 文字覆盖在封面上
+# 6: 瀑布流布局（图片在上）
+# 7: 瀑布流布局（文字覆盖封面）
+index_layout: 3
+
+# 是否显示文章摘要
+index_post_content:
+  method: 3
+  length: 500 # 自动摘要的长度
+
+# --------------------------------------
+# 评论系统
+# --------------------------------------
+
+comments:
+  # 选择评论系统：Disqus / Gitalk / Valine / Twikoo / Waline / Giscus 等
+  use: Waline
+  text: true # 显示评论按钮文字
+  lazyload: false # 懒加载
+  count: false # 是否显示文章评论数
+
+# --------------------------------------
+# 页脚设置
+# --------------------------------------
+
+footer:
+  owner:
+    enable: true
+    since: 2025 # 站点创建年份
+  copyright: true # 是否显示版权信息
+
+# --------------------------------------
+# 侧边栏设置
+# --------------------------------------
+
+aside:
+  enable: true # 是否启用侧边栏
+  hide: false # 是否默认隐藏
+  button: true # 是否显示隐藏按钮
+  position: left # 侧边栏位置（left / right）
+
+  card_author:
+    enable: true
+    description: "🎉欢迎访问我的博客！🎉"
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/kkyu9527
+
+  card_recent_post:
+    enable: true
+    limit: 5 # 显示最近文章数量
+
+  card_tags:
+    enable: true
+    limit: 40
+    orderby: random # 标签排序方式：random（随机）/ name（名称）/ length（长度）
+
+# --------------------------------------
+# 右下角悬浮按钮
+# --------------------------------------
+
+# 是否显示阅读模式
+readmode: true
+
+# 夜间模式
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# --------------------------------------
+# 站点分析
+# --------------------------------------
+
+# 百度统计
+baidu_analytics:
+
+# Google Analytics
+google_analytics:
+
+# Cloudflare Web Analytics
+cloudflare_analytics:
+
+# --------------------------------------
+# 文章分享
+# --------------------------------------
+
+share:
+  use: sharejs # 使用 Share.js 进行文章分享
+  sharejs:
+    sites: facebook,twitter,wechat,weibo,qq
+
+# --------------------------------------
+# 搜索设置
+# --------------------------------------
+
+search:
+  use: # 选择搜索方式：local_search / algolia_search
+  placeholder: "搜索..."
+
+# --------------------------------------
+# 数学公式支持
+# --------------------------------------
+
+math:
+  use: katex
+  per_page: true
+  katex:
+    copy_tex: false
+
+# --------------------------------------
+# 额外美化设置
+# --------------------------------------
+
+# 主题色设置
+theme_color:
+  enable: true
+  main: "#FF69B4" # 主题主色（粉色，推荐：#FF69B4 - HotPink）
+  paginator: "#FF1493" # 分页颜色（深粉色，推荐：#FF1493 - DeepPink）
+  text_selection: "#FF69B4" # 选中文本颜色（与主色一致）
+  button_hover: "#FF1493" # 按钮悬停颜色
+  link_color: "#FF69B4" # 链接颜色
+  meta_color: "#DB7093" # 元信息颜色（推荐：#DB7093 - PaleVioletRed）
+  hr_color: "#FFC0CB" # 分隔线颜色（浅粉色 #FFC0CB - Pink）
+  code_foreground: "#FF1493" # 代码块前景色
+  code_background: "rgba(255, 105, 180, 0.1)" # 代码块背景色，带透明度
+  toc_color: "#FF69B4" # 目录栏颜色
+  scrollbar_color: "#FF69B4" # 滚动条颜色
+  meta_theme_color_light: "#FFF0F5" # 亮色模式下的主题颜色
+  meta_theme_color_dark: "#8B008B" # 深色模式下的主题颜色
+
+# 文章间过渡动画
+enter_transitions: true
+
+# 页面加载动画
+preloader:
+  enable: true
+  source: 2
+
+# --------------------------------------
+# 其他高级功能
+# --------------------------------------
+
+# 开启 Pjax 加载（加快页面切换速度）
+pjax:
+  enable: false
+
+# 图片懒加载
+lazyload:
+  enable: false
+
+# 开启 PWA（渐进式网页应用）
+pwa:
+  enable: false
+
+# --------------------------------------
+# 配置 CDN 资源
+# --------------------------------------
+
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr

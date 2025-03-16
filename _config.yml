@@ -1,0 +1,116 @@
+# Hexo 配置文件
+# 官方文档: https://hexo.io/docs/configuration.html
+# 源码: https://github.com/hexojs/hexo/
+
+# ================================
+# 站点信息
+# ================================
+title: kkyu9527's Blog  # 你的博客标题
+subtitle: '记录与分享'  # 副标题
+description: '这是我的个人博客，记录技术学习与生活点滴。'  # 博客的描述
+keywords: 技术, 生活, 编程, Hexo  # 关键词
+author: kkyu9527  # 作者
+language: zh-CN  # 语言（简体中文）
+timezone: Asia/Shanghai  # 时区（中国）
+
+# ================================
+# 站点 URL 配置
+# ================================
+url: https://kkyu9527.github.io  # 你的 GitHub Pages 地址
+permalink: :year/:month/:day/:title/  # 文章的永久链接格式
+permalink_defaults:
+pretty_urls:
+  trailing_index: false  # 移除 'index.html' 后缀
+  trailing_html: false  # 移除 '.html' 后缀
+
+# ================================
+# 目录结构
+# ================================
+source_dir: source  # 源文件目录
+public_dir: public  # 生成的静态文件目录
+tag_dir: tags  # 标签目录
+archive_dir: archives  # 归档目录
+category_dir: categories  # 分类目录
+code_dir: downloads/code  # 代码下载目录
+i18n_dir: :lang  # 国际化目录
+skip_render:  # 需要跳过渲染的文件（为空表示不跳过）
+
+# ================================
+# 文章写作
+# ================================
+new_post_name: :title.md  # 新文章默认文件名
+default_layout: post  # 文章默认布局
+titlecase: false  # 是否将标题转换为标题格式
+external_link:
+  enable: true  # 外部链接是否在新标签页打开
+  field: site  # 作用范围（站点级别）
+  exclude: ''  # 排除的链接
+filename_case: 0  # 是否转换文件名大小写（0：不转换）
+render_drafts: false  # 是否渲染草稿
+post_asset_folder: true  # 开启文章资源文件夹（放置图片等）
+relative_link: false  # 是否使用相对链接
+future: true  # 是否允许显示未来时间的文章
+syntax_highlighter: prismjs  # 代码高亮方式
+highlight:
+  line_number: true  # 代码行号
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# ================================
+# 首页 & 文章分页
+# ================================
+index_generator:
+  path: ''
+  per_page: 10  # 每页文章数量
+  order_by: -date  # 按日期倒序排列
+
+# ================================
+# 分类 & 标签
+# ================================
+default_category: uncategorized  # 默认分类
+category_map:
+tag_map:
+
+# ================================
+# Meta 配置
+# ================================
+meta_generator: true  # 是否启用 Meta 信息
+
+# ================================
+# 日期 / 时间 格式
+# ================================
+date_format: YYYY-MM-DD  # 文章日期格式
+time_format: HH:mm:ss  # 文章时间格式
+updated_option: 'mtime'  # 文章更新时间依据 (mtime: 文件修改时间)
+
+# ================================
+# 分页
+# ================================
+per_page: 10  # 每页显示文章数量
+pagination_dir: page  # 分页目录
+
+# ================================
+# 主题 & 插件
+# ================================
+theme: butterfly  # 主题名称（Butterfly 主题）
+
+# Hexo 插件
+plugins:
+  - hexo-generator-feed  # 生成 RSS 订阅
+  - hexo-generator-sitemap  # 生成网站地图
+  - hexo-renderer-pug  # 支持 Pug 模板引擎
+  - hexo-renderer-stylus  # 支持 Stylus CSS 预处理
+
+# ================================
+# 部署设置（GitHub Pages）
+# ================================
+deploy:
+  type: git
+  repo: git@github.com:kkyu9527/kkyu9527.github.io.git  # 你的 GitHub 仓库地址
+  branch: main  # 部署分支（GitHub Pages 一般为 main）

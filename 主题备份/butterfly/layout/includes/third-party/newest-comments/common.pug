@@ -3,7 +3,7 @@ script.
     changeContent: content => {
       if (content === '') return content
 
-      content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[!{_p("aside.card_newest_comments.image")}]') // replace image link
+      content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[!{_p("aside.card_newest_comments.images")}]') // replace images link
       content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[!{_p("aside.card_newest_comments.link")}]') // replace url
       content = content.replace(/<pre><code>.*?<\/pre>/gi, '[!{_p("aside.card_newest_comments.code")}]') // replace code
       content = content.replace(/<code>.*?<\/code>/gi, '[!{_p("aside.card_newest_comments.code")}]') // replace code

@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const { updated, isResize, mounted } = e
       if (!updated.length || !mounted.length || isResize) return
 
-      btf.loadLightbox(container.querySelectorAll('img:not(.medium-zoom-image)'))
+      btf.loadLightbox(container.querySelectorAll('img:not(.medium-zoom-images)'))
 
       if (ig.getGroups().length === maxGroupKey) {
         btf.setLoading.remove(container)

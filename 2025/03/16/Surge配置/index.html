@@ -1,0 +1,397 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🌟 Surge配置 🌟 | kkyu9527 Blog</title><meta name="author" content="kkyu9527"><meta name="copyright" content="kkyu9527"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#FFF0F5"><meta name="description" content="🚀 我的 Surge 配置记录🌟 1️⃣ 新建配置创建一个✨ 空白配置 ✨：  📌 在 Surge 应用中新建一个空配置文件，然后将以下配置代码粘贴进去。 [General] # &gt; 日志级别 loglevel &#x3D; notify show-error-page-for-reject &#x3D; true # &gt; 允许Wi-Fi访问 allow-wifi-access">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🌟 Surge配置 🌟">
+<meta property="og:url" content="https://kkyu9527.github.io/2025/03/16/Surge%E9%85%8D%E7%BD%AE/">
+<meta property="og:site_name" content="kkyu9527 Blog">
+<meta property="og:description" content="🚀 我的 Surge 配置记录🌟 1️⃣ 新建配置创建一个✨ 空白配置 ✨：  📌 在 Surge 应用中新建一个空配置文件，然后将以下配置代码粘贴进去。 [General] # &gt; 日志级别 loglevel &#x3D; notify show-error-page-for-reject &#x3D; true # &gt; 允许Wi-Fi访问 allow-wifi-access">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kkyu9527.github.io/images/Surge%E9%85%8D%E7%BD%AE/Surge%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png">
+<meta property="article:published_time" content="2025-03-16T03:59:49.000Z">
+<meta property="article:modified_time" content="2025-03-17T12:46:40.556Z">
+<meta property="article:author" content="kkyu9527">
+<meta property="article:tag" content="Surge">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kkyu9527.github.io/images/Surge%E9%85%8D%E7%BD%AE/Surge%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "🌟 Surge配置 🌟",
+  "url": "https://kkyu9527.github.io/2025/03/16/Surge%E9%85%8D%E7%BD%AE/",
+  "image": "https://kkyu9527.github.io/images/Surge%E9%85%8D%E7%BD%AE/Surge%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png",
+  "datePublished": "2025-03-16T03:59:49.000Z",
+  "dateModified": "2025-03-17T12:46:40.556Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "kkyu9527",
+      "url": "https://kkyu9527.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://kkyu9527.github.io/2025/03/16/Surge%E9%85%8D%E7%BD%AE/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#8B008B')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#FFF0F5')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '🌟 Surge配置 🌟',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background-image: url(/img/background.png);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/images/Surge配置/Surge配置封面.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">kkyu9527 Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">🌟 Surge配置 🌟</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">🌟 Surge配置 🌟</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-16T03:59:49.000Z" title="发表于 2025-03-16 11:59:49">2025-03-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-17T12:46:40.556Z" title="更新于 2025-03-17 20:46:40">2025-03-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="🚀-我的-Surge-配置记录"><a href="#🚀-我的-Surge-配置记录" class="headerlink" title="🚀 我的 Surge 配置记录"></a>🚀 我的 Surge 配置记录</h1><h2 id="🌟-1️⃣-新建配置"><a href="#🌟-1️⃣-新建配置" class="headerlink" title="🌟 1️⃣ 新建配置"></a>🌟 1️⃣ 新建配置</h2><p>创建一个✨ <strong>空白配置</strong> ✨：</p>
+<p><img src="/../images/Surge%E9%85%8D%E7%BD%AE/%E6%96%B0%E5%A2%9E%E9%85%8D%E7%BD%AE.png" alt="Surge配置图片"></p>
+<p>📌 在 Surge 应用中新建一个空配置文件，然后将以下配置代码粘贴进去。</p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">[General]
+# &gt; 日志级别
+loglevel &#x3D; notify
+show-error-page-for-reject &#x3D; true
+# &gt; 允许Wi-Fi访问
+allow-wifi-access &#x3D; false
+# &gt; All Hybrid 网络并发
+all-hybrid &#x3D; false
+# &gt; IPv6 支持（默认关闭）
+ipv6 &#x3D; false
+# &gt; IPv6 VIF（默认禁用）
+ipv6-vif &#x3D; disabled
+# &gt; 测试超时（秒）
+test-timeout &#x3D; 2
+# &gt; Internet 测试 URL
+internet-test-url &#x3D; http:&#x2F;&#x2F;www.baidu.com
+# &gt; 代理测速 URL
+proxy-test-url &#x3D; http:&#x2F;&#x2F;connectivitycheck.gstatic.com&#x2F;generate_204
+# &gt; GeoIP数据库
+geoip-maxmind-url &#x3D; https:&#x2F;&#x2F;github.com&#x2F;Hackl0us&#x2F;GeoIP2-CN&#x2F;raw&#x2F;release&#x2F;Country.mmdb
+# &gt; 排除简单主机名
+exclude-simple-hostnames &#x3D; true
+# &gt; DNS 服务器
+dns-server &#x3D; 223.5.5.5, 119.29.29.29
+# &gt; DNS 加密服务器
+encrypted-dns-server &#x3D; https:&#x2F;&#x2F;223.5.5.5&#x2F;dns-query
+# &gt; DNS 劫持
+hijack-dns &#x3D; 8.8.8.8:53, 8.8.4.4:53
+# &gt; 从 &#x2F;etc&#x2F;hosts 读取 DNS 记录
+read-etc-hosts &#x3D; true
+# &gt; 远程控制器
+http-api-web-dashboard &#x3D; true
+use-default-policy-if-wifi-not-primary &#x3D; false
+# &gt; 跳过代理
+skip-proxy &#x3D; 192.168.0.0&#x2F;24, 10.0.0.0&#x2F;8, 172.16.0.0&#x2F;12, 127.0.0.1, localhost, *.local
+# &gt; Always Real IP
+always-real-ip &#x3D; *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# &gt; 兼容模式(若需要使用Homekit摄像头，可以开启兼容模式，但开启兼容模式会导致一些屏蔽广告的模块失效，请自行取舍)
+# compatibility-mode &#x3D; 5
+# &gt; Surge VIF
+# tun-excluded-routes &#x3D; 192.168.0.0&#x2F;16, 10.0.0.0&#x2F;8, 172.16.0.0&#x2F;12
+# tun-included-routes &#x3D; 192.168.1.12&#x2F;32
+# &gt; 禁用 GEOIP 自动更新
+disable-geoip-db-auto-update &#x3D; true
+# &gt; 当节点不支持UDP时，默认fallback 到reject
+udp-policy-not-supported-behaviour &#x3D; reject
+
+[Proxy Group]
+# &gt; 策略组
+🇭🇰 香港节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇭🇰)|(香港)|(Hong)|(HK), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;Hong_Kong.png
+
+🇺🇸 美国节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇺🇸)|(美国)|(States)|(US), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;United_States.png
+
+🇯🇵 日本节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇯🇵)|(日本)|(Japan)|(JP), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;Japan.png
+
+🇨🇳 台湾节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇨🇳)|(台湾)|(Tai)|(TW), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;China.png
+
+🇰🇷 韩国节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇰🇷)|(韩国)|(Korea)|(KR), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;South_Korea.png
+
+🇸🇬 新加坡节点 &#x3D; select, include-other-group&#x3D;✈️ 全球代理, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, policy-regex-filter&#x3D;(🇸🇬)|(新加坡)|(Singapore)|(SG), icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Rounded_Rectangle&#x2F;Singapore.png
+
+✈️ 全球代理 &#x3D; select, policy-path&#x3D;https:&#x2F;&#x2F;api.wcc.best&#x2F;sub?target&#x3D;surge&amp;ver&#x3D;4&amp;url&#x3D;https%3A%2F%2Fapi.xmancdn.net%2Fosubscribe.php%3Fsid%3D154914%26token%3DBZBrvGBHAwuY&amp;insert&#x3D;false&amp;config&#x3D;https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&amp;emoji&#x3D;true&amp;list&#x3D;false&amp;xudp&#x3D;false&amp;udp&#x3D;false&amp;tfo&#x3D;false&amp;expand&#x3D;true&amp;scv&#x3D;true&amp;fdn&#x3D;false, update-interval&#x3D;0, no-alert&#x3D;0, hidden&#x3D;0, include-all-proxies&#x3D;0, icon-url&#x3D;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Semporia&#x2F;Hand-Painted-icon&#x2F;master&#x2F;Universal&#x2F;Final.png
+OpenAi &#x3D; select, include-all-proxies&#x3D;0, include-other-group&#x3D;✈️ 全球代理, hidden&#x3D;0, policy-regex-filter&#x3D;(高级)
+
+[Rule]
+# &gt; 广告拦截
+# RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;thNylHx&#x2F;Tools&#x2F;main&#x2F;Ruleset&#x2F;Surge&#x2F;Block&#x2F;Ads_ml.list,REJECT,pre-matching,extended-matching
+# &gt; OpenAI
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;EAlyce&#x2F;conf&#x2F;refs&#x2F;heads&#x2F;main&#x2F;Rule&#x2F;OpenAI.list,OpenAi &#x2F;&#x2F; OpenAi
+# &gt; 苹果
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Apple&#x2F;Apple_All_No_Resolve.list,DIRECT &#x2F;&#x2F; Apple
+# &gt; GitHub
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;GitHub&#x2F;GitHub.list,&quot;🇭🇰 香港节点&quot;,no-resolve &#x2F;&#x2F; github
+# &gt; 微软
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Microsoft&#x2F;Microsoft.list,DIRECT &#x2F;&#x2F; Microsoft
+# &gt; Telegram
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Telegram&#x2F;Telegram.list,&quot;🇺🇸 美国节点&quot; &#x2F;&#x2F; Telegram
+# &gt; Epic
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Epic&#x2F;Epic.list,&quot;🇭🇰 香港节点&quot; &#x2F;&#x2F; Epic
+# &gt; Steam
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Steam&#x2F;Steam.list,&quot;🇭🇰 香港节点&quot; &#x2F;&#x2F; Steam
+# &gt; YouTube
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;YouTube&#x2F;YouTube.list,&quot;🇸🇬 新加坡节点&quot; &#x2F;&#x2F; Youtube
+# &gt; Netflix
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Netflix&#x2F;Netflix.list,&quot;🇸🇬 新加坡节点&quot; &#x2F;&#x2F; Netflix
+# &gt; Disney
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Disney&#x2F;Disney.list,&quot;🇸🇬 新加坡节点&quot; &#x2F;&#x2F; Disney
+# &gt; Spotify
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Spotify&#x2F;Spotify.list,&quot;🇸🇬 新加坡节点&quot; &#x2F;&#x2F; Spotify
+# &gt; TikTok
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;TikTok&#x2F;TikTok.list,&quot;🇯🇵 日本节点&quot; &#x2F;&#x2F; TikTok
+# &gt; BiliBili
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;BiliBili&#x2F;BiliBili.list,DIRECT &#x2F;&#x2F; Bilibili
+# &gt; 国内媒体
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;ChinaMedia&#x2F;ChinaMedia.list,DIRECT &#x2F;&#x2F; 国内媒体
+# &gt; 全球代理
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;Proxy&#x2F;Proxy_All_No_Resolve.list,&quot;✈️ 全球代理&quot;,extended-matching &#x2F;&#x2F; 国外主流
+# &gt; 国内直连
+RULE-SET,https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;blackmatrix7&#x2F;ios_rule_script&#x2F;master&#x2F;rule&#x2F;Surge&#x2F;ChinaMax&#x2F;ChinaMax_All.list,DIRECT,extended-matching &#x2F;&#x2F; 国内直连
+# &gt; 局域网地址
+RULE-SET,LAN,DIRECT
+# &gt; DNS 查询失败走Final规则
+FINAL,✈️ 全球代理,dns-failed &#x2F;&#x2F; 兜底策略
+
+[MITM]
+skip-server-cert-verify &#x3D; true
+h2 &#x3D; true
+ca-passphrase &#x3D; DB5943D8
+ca-p12 &#x3D; MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFAwggRMAgEAMIIERQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIJnvsh+eNKpQCAggAgIIEGFCcHY4XopEufAptYY&#x2F;UTwMFezaa2zIyM+4FR4rbei1w03yGyEf6UhlikQt8PKmDztWY0mzn&#x2F;G3YMxydILCdd23OHlpWSNIUR9GsE7vE&#x2F;pAld0ORJIxr+qCQmY6Hg3dCsBDk+z2LC6U3xTPGDG1lztGTcfQptNLY42rszwSFLDWhvf5kgF10FdmyZI20iyn2Odr+kOb9SVP1HfsoYQmfjFj3TMNj1OSYz+JrCS6qY&#x2F;ftoxd2KmL+bqffW9TyoZFTFAjG7Ngj9XmfYuqerbEv4Y+R5H52N6u6JEQUgL3Y3KQLG5S06eewXrXyVrOVb29XmcRDbUPVMfd5A788YdcvDtL7LXPSQHgzb3THkDVD5uSxaqEq9uNhzOPLBAvdvsoKDBDqzFuGznBuXfYo9zpyzIOozK6Wu84Mi1A5UAKn7&#x2F;+qLinDXSt1TfJ9+bLJVoP9gfrznoKFysoPSJRWd+mPe89eDObRha8XvIznfseefmj+hKMlUJGsiwNdpxDvdO5vSi&#x2F;slYpfRCfjGQWbafuDlA68CanzGcXqHz7OTi6cXv9k6rV8AC6WGAihAvxyEfxwFOzVwIFYwdSgLsAWw1bvvlsMm7Ug9+b90HwZ57X&#x2F;Zdg2y5NJ5X9IwvU8zTh&#x2F;mKOYAGOlWy1G&#x2F;MlIKAPWyOV&#x2F;SPWBeXDOpIcu9EU7Cpo5GG3IXBWS4Y+W&#x2F;9AI3wX1&#x2F;SjTIw7DnQu8Kwomf1qqsEqy45lk1c03p97glu476y7Lct9ZVAce3uNq7YJk15dt+ytPIYXjjkknWtwyBqki&#x2F;wGLTgeA8ch8u5dW2aZeSacKu4IO7y61JzrrXrvu8RFl5HY9oXEIckn3AzN1mMsRCGLzZTiEeoyHzkJAOIt15wVHusKtPRTrao9IJ7LVVQO4lazrkvDf0Zg4O8T8P3aHtXwQCW47q1U0mbUKR+vbX2mYiu0mkSrLNaVOogOJPxfCbk1toK2x1gFyBO25Re4yc5CxeC6VdiAlP7wPe&#x2F;UvlQxiOmm03PBpS9mPCtxlawpCImf5hCUlE86npGuwSeSRQy4ZcDu2EgECGt1ygigfNja&#x2F;9rdWZW9U598Uvc30jltmZXd8QKzWzvxJZ8qPGqz23agRbdSYzSAmdFjhgJ5+J1c2&#x2F;gMJlkiF1Trldohkya+mTjU6jyrV9O&#x2F;tFlE9mbuT&#x2F;iP+MH45laOuQE0&#x2F;pj&#x2F;Nzm26LRciLhYMSFHxaD&#x2F;nN02lOK&#x2F;7DvMBRxBFQ04Wh7s9uSIngWYlUi4LCu0fUbsRL5XP1Br5JGAXUs9UEBtrQW0g+S7HiCUol&#x2F;lVO2GNSlpsfqBr20wykAJZyjGKuslILviN6pOrdP&#x2F;CGbgsxDsKl5LRIcOPa3asON4vCIatraWOdUF&#x2F;2kT5SRntIfS5qxtbPgP9jS72ZNZkokz4YCUwggWIBgkqhkiG9w0BBwGgggV5BIIFdTCCBXEwggVtBgsqhkiG9w0BDAoBAqCCBO4wggTqMBwGCiqGSIb3DQEMAQMwDgQI&#x2F;fBMW8nh5TsCAggABIIEyAP&#x2F;QmzYmpgpYfuomiWhoFKWIrsPZF3nd6dr61jU&#x2F;sFZt7S2+y0ekdFw1&#x2F;I2QLyfFTVgTrUs7&#x2F;H3CQq2zPg&#x2F;gwZUoXDRLkDaZUo+DOP4bz&#x2F;d3&#x2F;oRbl+XPoKFx3RuCBNXKKSJre68+GCFn&#x2F;WrbY5SMuWirOQSSJnDd0T6cMnq+M+KvvJkK2+LfCTDvYZP16qTaUjciofh3bCWkQuhmxbX9hkRllSaNtQhOAdJyyyV5u1WmrHDNrb9i29XPyrOpt8VQ8cv6JF9s1puLYwA4be+UBdjNQWRVgLt06i7rtrGD2xdTo220ByEo88zqVw3TMtg7uy0yuPGPzjRj6XXkdjWt91WAmP1x558CvREFcDzVcLe54a6aLdz6iRBF6C5y3ljwDfXSplzcDfVlLLZZaqGQVjIK7u3cLySoNJU&#x2F;ki7LnWVwVWYstQBdC7NHnI&#x2F;Y63iaLwk1E&#x2F;1ZDq0BnHqpTw5sjxyKjtlLoNKcxlWZlMRD23z5TXJD+9wd6GaymBo5buzahae&#x2F;oKqUwFrWweKo7CzV2dhUS4W01Yoiwpijf5lStEN+46Dm7Knmz6e4YHFNz&#x2F;uSf6jLudXTJ61LznQrPSzJWbui4OnASW&#x2F;Bt+J5MFzYNIPTbeubdi8WJ+SOtUFHxUJmkwX3ylWI6+f3VhOLrcE2K9TVhqnJo1NDb8vQRw7OaHh0RpKUOn&#x2F;HPp+mpnoFuVprkKzo1UG1Pt0C9jTPSOXpk2+3giWpdPy&#x2F;6PYdUBWz+2Tm7VCnPlmcMHDWDxMsL8ohk&#x2F;vsMHu+wTYOvpPIx2Lxskr6s6&#x2F;MPpWRUBW1JVSgQ4EPNrzOuhY9UxNInMhwIr2+Z5NZHoyKTrcTV30BJPpThD07tRiM1S4b3wGmDuK0CFS2PocPvO7USbs5KnJ1fkSg3GMv7Yye8TFwMnFBYGvDujE+K2MhhNMKyPJVopMamb5&#x2F;Zj1mQK&#x2F;KlOSX1KcUr8gyBxbwxoCwzCAJws1dokLeUFNH9uMdHg&#x2F;PIHoMeAJ&#x2F;pF+W+B&#x2F;NDbMXncApMp+kvZ5T2I+gtYN7bMAi2UZu8mDJwgP55+iyRnxtCLclNvwKtlndlG6YfPLt5fpmscPDqdcog95IpYACPxea96OYxiWFntJqvDyeAzuWhdIH66xuMJm3OyuWiXd44xjfGpnbBE383OaYL0wGqQlaCenBb47DnkifBGWZcRB2UGtib5r5Wxbo2wnLu+EGrdaIkSKsqF6CgfW+&#x2F;VEIcRcIBVnJGK5XhP6PsVO+pAAih36RpohzEu43LyAhMDaO2guZq5ykct&#x2F;vilJgaIsf82pj81VfQrbN1aX&#x2F;rTuawrMEYWTXAi4UDr8gMStBB2S8tn1cdwpZAm1Tx55FXSHxrGLW19xIqbkS40OqAvGLqLO4dUDLzrkE31M741ExYGTp0LsBzmnSemOsvY&#x2F;CLnGmCpF8K1Q0KQMXN5coV4WQOtjvbTl1XbTQ0fPuJFcrRLP4xMS+AgbILhSnD8NWzlvvrAXiH2HjdrmMw4jsmWni1A2P01QHlMhpQDzXEIt28klaaHs7wYNGtjdBsHZh49euGAJYC97NFTN4VTDVXKEaSF1&#x2F;DKd7untdIPORZ3iuqEkKCK9KMYDjs9ixv4cC0LxeTGAqlE6kUirIa3z&#x2F;IXvlHXF+DFsMCMGCSqGSIb3DQEJFTEWBBQVgU+zm6bemvWVTUvnnCSkp8Cm3TBFBgkqhkiG9w0BCRQxOB42AFMAdQByAGcAZQAgAEcAZQBuAGUAcgBhAHQAZQBkACAAQwBBACAARABCADUAOQA0ADMARAA4MC0wITAJBgUrDgMCGgUABBTfeNChzcXhh9I09ZOe1UB0eQre8QQIYNXw2I1pCDA&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="🛠️-2️⃣-修改配置"><a href="#🛠️-2️⃣-修改配置" class="headerlink" title="🛠️ 2️⃣ 修改配置"></a>🛠️ 2️⃣ 修改配置</h2><h3 id="🆕-2-1️⃣-新增规则"><a href="#🆕-2-1️⃣-新增规则" class="headerlink" title="🆕 2.1️⃣ 新增规则"></a>🆕 2.1️⃣ 新增规则</h3><p>访问 <a target="_blank" rel="noopener" href="https://github.com/blackmatrix7/ios_rule_script/tree/master">📂 GitHub仓库</a> 📚，选择所需的规则集，并按以下步骤添加：</p>
+<ul>
+<li>在 <code>[Rule]</code> 标签下插入规则集链接</li>
+<li>在规则末尾选择对应的策略组</li>
+<li>补充清晰的注释 📝✨</li>
+</ul>
+<p>🔖 <strong>示例：</strong></p>
+<pre class="line-numbers language-conf" data-language="conf"><code class="language-conf">RULE-SET,你的规则链接地址,对应策略组名 &#x2F;&#x2F; 你的注释说明<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="🎯-2️⃣-修改配置"><a href="#🎯-2️⃣-修改配置" class="headerlink" title="🎯 2️⃣ 修改配置"></a>🎯 2️⃣ 修改配置</h3><h4 id="🎨-修改-Proxy-Group-配置"><a href="#🎨-修改-Proxy-Group-配置" class="headerlink" title="🎨 修改 [Proxy Group] 配置"></a>🎨 修改 <code>[Proxy Group]</code> 配置</h4><p>🛠 在配置文件中自定义你的策略组，快速方法包括：</p>
+<ul>
+<li>复制已有的策略组配置，稍作调整</li>
+<li>或使用 Surge 的可视化编辑功能 📲✨</li>
+</ul>
+<hr>
+<h2 id="📖-Surge-配置概览（示例）"><a href="#📖-Surge-配置概览（示例）" class="headerlink" title="📖 Surge 配置概览（示例）"></a>📖 Surge 配置概览（示例）</h2><p>🌐 <strong>全局代理节点选择</strong></p>
+<ul>
+<li>🇭🇰 香港节点</li>
+<li>🇺🇸 美国节点</li>
+<li>🇯🇵 日本节点</li>
+<li>🇨🇳 台湾节点</li>
+<li>🇰🇷 韩国节点</li>
+<li>🇸🇬 新加坡节点</li>
+</ul>
+<p>🚀 <strong>精选服务专用节点</strong></p>
+<ul>
+<li>🎯 OpenAI 专用</li>
+<li>🎮 Steam 专用</li>
+<li>📺 YouTube 专用</li>
+<li>🎧 Spotify 专用</li>
+<li>🎥 Netflix 专用</li>
+<li>🎵 TikTok 专用</li>
+</ul>
+<p>🚫 <strong>广告拦截</strong> (可选，默认已注释掉)</p>
+<p>🧩 <strong>常用规则来源</strong>：</p>
+<ul>
+<li>苹果 🍎：直连 (Direct)</li>
+<li>GitHub 🐙 (香港节点)</li>
+<li>Telegram ✈️ 🇺🇸</li>
+<li>微软服务 ☁️ DIRECT</li>
+</ul>
+<p>🏠 <strong>局域网和国内直连</strong></p>
+<p>📡 <strong>DNS 优化与防劫持配置</strong></p>
+<hr>
+<h2 id="🚀-配置建议与优化提示"><a href="#🚀-配置建议与优化提示" class="headerlink" title="🚀 配置建议与优化提示"></a>🚀 <strong>配置建议与优化提示</strong></h2><ul>
+<li>使用不同国家的节点可以优化访问特定区域服务的体验 🌏✨</li>
+<li>定期检查规则更新并优化节点选择 🌟</li>
+<li>根据自己需求，开启广告屏蔽等附加功能来提升整体体验 🚫🚀</li>
+</ul>
+<hr>
+<p>🎉 <strong>大功告成！现在尽情享受🚀Surge吧～</strong> 🎉</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kkyu9527.github.io">kkyu9527</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kkyu9527.github.io/2025/03/16/Surge%E9%85%8D%E7%BD%AE/">https://kkyu9527.github.io/2025/03/16/Surge%E9%85%8D%E7%BD%AE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://kkyu9527.github.io" target="_blank">kkyu9527 Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Surge/">Surge</a></div><div class="post-share"><div class="social-share" data-image="/images/Surge%E9%85%8D%E7%BD%AE/Surge%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/03/16/Github%E6%B7%BB%E5%8A%A0ssh%E5%AF%86%E9%92%A5/" title="🚀 Github 添加 SSH 密钥 🔑"><img class="cover" src="/images/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5%E5%B0%81%E9%9D%A2.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">🚀 Github 添加 SSH 密钥 🔑</div></div><div class="info-2"><div class="info-item-1">🌟 为什么要添加 SSH 密钥？在 GitHub 中添加 SSH 密钥 可以提升 Git 操作的安全性 🔒，让你 免去每次输入用户名和密码的烦恼，提高开发效率 ⏩。 通过 SSH 认证，你可以安全地 推送（push）、拉取（pull） 代码，而无需每次都手动输入凭据。🎯 下面，我们将分步讲解如何在 GitHub 添加 SSH 密钥，让你的 Git 之旅更加顺畅！ 🚀 ⸻ 🔍 1. 检查是否已有 SSH 密钥 🔑在终端（Linux&#x2F;macOS）或 Git Bash（Windows）中运行以下命令，检查是否已有 SSH 密钥： ls -al ~/.ssh  ✅ 如果看到类似 id_rsa 和 id_rsa.pub 文件，表示已经存在 SSH 密钥，可以直接使用。❌ 如果没有，则需要创建新的密钥。 ⸻ ✨ 2. 生成新的 SSH 密钥（如果没有的话） 🔐如果你没有 SSH 密钥，可以运行以下命令生成一个： ssh-keygen -t rsa -b 4096 -C "your_email@example.com"  📌 参数解释：  -t rsa：指定使用...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/Avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">kkyu9527</div><div class="author-info-description">🎉欢迎访问我的博客！🎉</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/kkyu9527"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9A%80-%E6%88%91%E7%9A%84-Surge-%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">🚀 我的 Surge 配置记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8C%9F-1%EF%B8%8F%E2%83%A3-%E6%96%B0%E5%BB%BA%E9%85%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">🌟 1️⃣ 新建配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-2%EF%B8%8F%E2%83%A3-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">🛠️ 2️⃣ 修改配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%86%95-2-1%EF%B8%8F%E2%83%A3-%E6%96%B0%E5%A2%9E%E8%A7%84%E5%88%99"><span class="toc-number">1.2.1.</span> <span class="toc-text">🆕 2.1️⃣ 新增规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%AF-2%EF%B8%8F%E2%83%A3-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.2.</span> <span class="toc-text">🎯 2️⃣ 修改配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%8E%A8-%E4%BF%AE%E6%94%B9-Proxy-Group-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">🎨 修改 [Proxy Group] 配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%93%96-Surge-%E9%85%8D%E7%BD%AE%E6%A6%82%E8%A7%88%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">📖 Surge 配置概览（示例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%9A%80-%E9%85%8D%E7%BD%AE%E5%BB%BA%E8%AE%AE%E4%B8%8E%E4%BC%98%E5%8C%96%E6%8F%90%E7%A4%BA"><span class="toc-number">1.4.</span> <span class="toc-text">🚀 配置建议与优化提示</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/03/17/Git%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="🚀 Git 高效使用技巧与规范指南"><img src="/images/Git%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/git-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🚀 Git 高效使用技巧与规范指南"/></a><div class="content"><a class="title" href="/2025/03/17/Git%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" title="🚀 Git 高效使用技巧与规范指南">🚀 Git 高效使用技巧与规范指南</a><time datetime="2025-03-17T12:02:25.000Z" title="发表于 2025-03-17 20:02:25">2025-03-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/16/Butterfly%E9%85%8D%E7%BD%AE/" title="🌸 Butterfly 主题配置详解 🦋"><img src="/images/Butterfly%E9%85%8D%E7%BD%AE/Butterfly%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🌸 Butterfly 主题配置详解 🦋"/></a><div class="content"><a class="title" href="/2025/03/16/Butterfly%E9%85%8D%E7%BD%AE/" title="🌸 Butterfly 主题配置详解 🦋">🌸 Butterfly 主题配置详解 🦋</a><time datetime="2025-03-16T11:32:31.000Z" title="发表于 2025-03-16 19:32:31">2025-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/16/Github%E6%B7%BB%E5%8A%A0ssh%E5%AF%86%E9%92%A5/" title="🚀 Github 添加 SSH 密钥 🔑"><img src="/images/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/Github%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🚀 Github 添加 SSH 密钥 🔑"/></a><div class="content"><a class="title" href="/2025/03/16/Github%E6%B7%BB%E5%8A%A0ssh%E5%AF%86%E9%92%A5/" title="🚀 Github 添加 SSH 密钥 🔑">🚀 Github 添加 SSH 密钥 🔑</a><time datetime="2025-03-16T10:52:00.000Z" title="发表于 2025-03-16 18:52:00">2025-03-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/16/Surge%E9%85%8D%E7%BD%AE/" title="🌟 Surge配置 🌟"><img src="/images/Surge%E9%85%8D%E7%BD%AE/Surge%E9%85%8D%E7%BD%AE%E5%B0%81%E9%9D%A2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🌟 Surge配置 🌟"/></a><div class="content"><a class="title" href="/2025/03/16/Surge%E9%85%8D%E7%BD%AE/" title="🌟 Surge配置 🌟">🌟 Surge配置 🌟</a><time datetime="2025-03-16T03:59:49.000Z" title="发表于 2025-03-16 11:59:49">2025-03-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/background.png);"><div id="footer-wrap"><div class="copyright">&copy;2025 By kkyu9527</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      false 
+        ? (usePjax ? pjax.loadUrl('/404') : window.location.href = '/404')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

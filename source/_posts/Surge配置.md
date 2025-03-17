@@ -4,9 +4,7 @@ date: 2025-03-16 11:59:49
 categories: [技术分享]
 tags: [Surge]
 author: "kkyu9527"
-cover: /Surge配置/Surge配置封面.png
----
-
+cover: /images/Surge配置/Surge配置封面.png
 ---
 
 # 🚀 我的 Surge 配置记录
@@ -15,7 +13,7 @@ cover: /Surge配置/Surge配置封面.png
 
 创建一个✨ **空白配置** ✨：
 
-![Surge配置图片](../Surge配置/新增配置.png)
+![Surge配置图片](../images/Surge配置/新增配置.png)
 
 📌 在 Surge 应用中新建一个空配置文件，然后将以下配置代码粘贴进去。
 
@@ -143,7 +141,7 @@ ca-p12 = MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFA
 
 🔖 **示例：**
 
-```surge
+```conf
 RULE-SET,你的规则链接地址,对应策略组名 // 你的注释说明
 ```
 

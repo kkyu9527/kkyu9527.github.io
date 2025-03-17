@@ -5,10 +5,10 @@
 # ================================
 # 站点信息
 # ================================
-title: kkyu9527's Blog  # 你的博客标题
+title: kkyu9527 Blog  # 你的博客标题
 subtitle: '记录与分享'  # 副标题
 description: '这是我的个人博客，记录技术学习与生活点滴。'  # 博客的描述
-keywords: 技术, 生活, 编程, Hexo  # 关键词
+keywords: 技术, 生活, 编程  # 关键词
 author: kkyu9527  # 作者
 language: zh-CN  # 语言（简体中文）
 timezone: Asia/Shanghai  # 时区（中国）

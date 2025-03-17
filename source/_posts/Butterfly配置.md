@@ -1,10 +1,10 @@
 ---
 title: 🌸 Butterfly 主题配置详解 🦋
 date: 2025-03-16 19:32:31
-categories: [技术分享]
+categories: [Blog]
 tags: [Hexo, Butterfly]
 author: "kkyu9527"
-cover: /Butterfly配置/Butterfly配置封面.png
+cover: /images/Butterfly配置/Butterfly配置封面.png
 ---
 
 ## 🌟 Butterfly 主题简介
@@ -15,7 +15,7 @@ Butterfly 🦋 是 Hexo 主题中极具美感与功能性的代表！无论是�
 
 在主题目录中找到 `_config.yml` 文件，你将看到如下结构：
 
-![Butterfly 结构](../Butterfly配置/butterfly结构.png)
+![Butterfly 结构](../images/Butterfly配置/butterfly结构.png)
 
 ---
 

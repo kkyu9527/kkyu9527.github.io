@@ -137,7 +137,7 @@ index_post_content:
 
 comments:
   # 选择评论系统：Disqus / Gitalk / Valine / Twikoo / Waline / Giscus 等
-  use: Waline
+  use:
   text: true # 显示评论按钮文字
   lazyload: false # 懒加载
   count: false # 是否显示文章评论数
@@ -260,7 +260,7 @@ enter_transitions: true
 # 页面加载动画
 preloader:
   enable: true
-  source: 2
+  source: 0
 
 # --------------------------------------
 # 其他高级功能
@@ -268,7 +268,7 @@ preloader:
 
 # 开启 Pjax 加载（加快页面切换速度）
 pjax:
-  enable: false
+  enable: true
 
 # 图片懒加载
 lazyload:

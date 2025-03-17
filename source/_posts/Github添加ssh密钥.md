@@ -1,10 +1,10 @@
 ---
 title: 🚀 Github 添加 SSH 密钥 🔑
 date: 2025-03-16 18:52:00
-categories: [技术分享]
-tags: [Github]
+categories: [终端]
+tags: [Github, Terminal]
 author: "kkyu9527"
-cover: /Github添加SSH密钥/Github添加SSH密钥封面.png
+cover: /images/Github添加SSH密钥/Github添加SSH密钥封面.png
 ---
 
 ## 🌟 为什么要添加 SSH 密钥？
@@ -23,7 +23,7 @@ cover: /Github添加SSH密钥/Github添加SSH密钥封面.png
 ```shell
 ls -al ~/.ssh
 ```
-![检查SSH密钥.png](../Github添加SSH密钥/检查SSH密钥.png)
+![检查SSH密钥.png](../images/Github添加SSH密钥/检查SSH密钥.png)
 
 ✅ 如果看到类似 `id_rsa` 和 `id_rsa.pub` 文件，表示已经存在 SSH 密钥，可以直接使用。
 ❌ 如果没有，则需要创建新的密钥。
@@ -91,7 +91,7 @@ pbcopy < ~/.ssh/id_rsa.pub  # 适用于 macOS
 ## 🛠️ 5. 在 GitHub 添加 SSH 密钥 🔗
 1️⃣ **登录 GitHub**，进入 **SSH and GPG keys** 页面。
 2️⃣ 点击 **“New SSH key”** 按钮。
-![新增SSH密钥.png](../Github添加SSH密钥/新增SSH密钥.png)
+![新增SSH密钥.png](../images/Github添加SSH密钥/新增SSH密钥.png)
 3️⃣ **Title（标题）**：输入一个 **描述性名称**（如 *“My Laptop SSH Key”*）。
 4️⃣ **Key（密钥）**：粘贴刚刚复制的 **SSH 公钥内容**。
 5️⃣ 点击 **“Add SSH key”** ✅ **保存**。
@@ -111,7 +111,7 @@ ssh -T git@github.com
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-![SSH连接成功.png](../Github添加SSH密钥/SSH连接成功.png)
+![SSH连接成功.png](../images/Github添加SSH密钥/SSH连接成功.png)
 
 ✅ 这表示 **SSH 连接 GitHub 已成功**！ 🎉
 

@@ -15,14 +15,14 @@ nav:
   # 是否显示站点标题
   display_title: true
   # 是否固定导航栏
-  fixed: false
+  fixed: true
 
 menu:
-  # 这里可以自定义导航菜单，例如：
-  # 首页: / || fas fa-home
-  # 归档: /archives/ || fas fa-archive
-  # 分类: /categories/ || fas fa-folder-open
-  # 标签: /tags/ || fas fa-tags
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-user
 
 # --------------------------------------
 # 代码块设置
@@ -179,6 +179,10 @@ aside:
     enable: true
     limit: 40
     orderby: random # 标签排序方式：random（随机）/ name（名称）/ length（长度）
+
+  card_announcement: # 🛎️ 公告栏配置
+    enable: true  # 是否启用公告
+    content: 🚀欢迎来到我的博客~🔥
 
 # --------------------------------------
 # 右下角悬浮按钮

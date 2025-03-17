@@ -20,7 +20,7 @@ cover: /images/Github添加SSH密钥/Github添加SSH密钥封面.png
 ## 🔍 1. 检查是否已有 SSH 密钥 🔑
 
 在终端（Linux/macOS）或 Git Bash（Windows）中运行以下命令，检查是否已有 SSH 密钥：
-```shell
+```bash
 ls -al ~/.ssh
 ```
 ![检查SSH密钥.png](../images/Github添加SSH密钥/检查SSH密钥.png)
@@ -34,7 +34,7 @@ ls -al ~/.ssh
 
 如果你没有 SSH 密钥，可以运行以下命令生成一个：
 
-```shell
+```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 
@@ -44,7 +44,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 - `-C "your_email@example.com"`：添加一个 **标识（通常是你的 GitHub 绑定邮箱）** 📧
 
 💡 当系统提示：
-```shell
+```bash
 Enter a file in which to save the key (/home/user/.ssh/id_rsa):
 ```
 直接按 **Enter**，使用默认路径。
@@ -57,13 +57,13 @@ Enter a file in which to save the key (/home/user/.ssh/id_rsa):
 
 首先，确保 SSH 代理正在运行：
 
-```shell
+```bash
 eval "$(ssh-agent -s)"
 ```
 
 然后，将新的 SSH 私钥添加到 SSH 代理：
 
-```shell
+```bash
 ssh-add ~/.ssh/id_rsa
 ```
 
@@ -73,13 +73,13 @@ ssh-add ~/.ssh/id_rsa
 
 使用以下命令复制 SSH 公钥：
 
-```shell
+```bash
 cat ~/.ssh/id_rsa.pub
 ```
 
 或者：
 
-```shell
+```bash
 clip < ~/.ssh/id_rsa.pub  # 适用于 Windows Git Bash
 pbcopy < ~/.ssh/id_rsa.pub  # 适用于 macOS
 ```
@@ -102,12 +102,12 @@ pbcopy < ~/.ssh/id_rsa.pub  # 适用于 macOS
 
 运行以下命令测试 SSH 连接 GitHub：
 
-```shell
+```bash
 ssh -T git@github.com
 ```
 
 如果一切正常，会看到类似的输出：
-```shell
+```bash
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
@@ -121,7 +121,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 
 如果你希望 **Git 默认使用 SSH 而不是 HTTPS**，可以运行：
 
-```shell
+```bash
 git config --global url."git@github.com:".insteadOf "https://github.com/"
 ```
 
@@ -133,13 +133,13 @@ git config --global url."git@github.com:".insteadOf "https://github.com/"
 
 现在你可以使用 SSH 来 **克隆仓库** 📂：
 
-```shell
+```bash
 git clone git@github.com:your-username/your-repository.git
 ```
 
 或者进行其他 Git 操作，如 **推送代码**：
 
-```shell
+```bash
 git push origin main
 ```
 

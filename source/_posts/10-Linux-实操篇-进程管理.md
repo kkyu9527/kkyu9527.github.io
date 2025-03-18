@@ -1,7 +1,7 @@
 ---
 title: 🚀 10-Linux 实操篇 - 进程管理
 
-date: 2025-03-21 16:00:00
+date: 2025-03-16 16:00:00
 categories: [Linux]
 tags: [Linux, 进程管理, top, ps, kill, 运维]
 author: "kkyu9527"

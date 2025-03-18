@@ -1,6 +1,6 @@
 ---
 title: 📦 9-Linux 实操篇 - 软件包管理 🚀
-date: 2025-03-20 16:00:00
+date: 2025-03-12 16:00:00
 categories: [Linux]
 tags: [Linux, 软件管理, apt, dpkg, 源码安装, 包管理, Snap]
 author: "kkyu9527"

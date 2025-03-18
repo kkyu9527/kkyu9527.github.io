@@ -1,6 +1,6 @@
 ---
 title: 🐧 1-Linux 学习笔记 - 基础篇 📖
-date: 2025-03-18 10:00:00
+date: 2025-02-21 10:00:00
 categories: [Linux]
 tags: [Linux, Shell, 操作系统]
 author: "kkyu9527"
